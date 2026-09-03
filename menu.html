@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="منوی کامل رستوران چاشنی — پیش‌غذا، غذای اصلی، پیتزا، برگر، پاستا، نوشیدنی و دسر">
+  <title>منوی غذا | رستوران چاشنی</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>">
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="nav-wrap">
+      <a href="index.html" class="logo"><span class="logo-mark">🍽️</span><span>چاشنی<small>رستوران مدرن ایرانی</small></span></a>
+      <nav class="nav-links" aria-label="ناوبری اصلی">
+        <a href="index.html" data-nav="index.html">خانه</a>
+        <a href="menu.html" data-nav="menu.html">منو</a>
+        <a href="about.html" data-nav="about.html">درباره ما</a>
+        <a href="contact.html" data-nav="contact.html">تماس</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="reservation.html" class="btn btn-primary btn-reserve">رزرو میز</a>
+        <button class="hamburger" id="hamburger" aria-label="باز کردن منو" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="منوی موبایل">
+    <a href="index.html" data-nav="index.html">خانه</a>
+    <a href="menu.html" data-nav="menu.html">منو</a>
+    <a href="about.html" data-nav="about.html">درباره ما</a>
+    <a href="contact.html" data-nav="contact.html">تماس</a>
+    <a href="reservation.html" data-nav="reservation.html">رزرو میز</a>
+    <a href="reservation.html" class="btn btn-primary">رزرو میز 🍷</a>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>منوی <span>رستوران چاشنی</span></h1>
+        <p>۱۶ غذای منتخب در ۷ دسته‌بندی — دسته موردعلاقه‌تان را انتخاب کنید</p>
+        <div class="breadcrumb"><a href="index.html">خانه</a> / منوی غذا</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="filter-bar reveal" role="group" aria-label="فیلتر دسته‌بندی غذا">
+          <button class="filter-btn active" data-cat="all">همه</button>
+          <button class="filter-btn" data-cat="starter">پیش‌غذا</button>
+          <button class="filter-btn" data-cat="main">غذای اصلی</button>
+          <button class="filter-btn" data-cat="pizza">پیتزا</button>
+          <button class="filter-btn" data-cat="burger">برگر</button>
+          <button class="filter-btn" data-cat="pasta">پاستا</button>
+          <button class="filter-btn" data-cat="drink">نوشیدنی</button>
+          <button class="filter-btn" data-cat="dessert">دسر</button>
+        </div>
+        <p id="resultCount" style="text-align:center;color:var(--muted);font-size:.88rem;margin-bottom:22px"></p>
+        <div class="menu-grid" id="menuGrid"></div>
+      </div>
+    </section>
+
+    <section style="padding-bottom:20px">
+      <div class="cta reveal">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1400&auto=format&fit=crop" alt="" aria-hidden="true">
+        <div class="cta-inner">
+          <h2>نمی‌دانید چه <span>انتخابی</span> کنید؟</h2>
+          <p>میز رزرو کنید و از مشاوره رایگان سرآشپز ما برای انتخاب بهترین ترکیب غذایی بهره‌مند شوید.</p>
+          <div class="cta-btns">
+            <a href="reservation.html" class="btn btn-primary">رزرو میز 🍷</a>
+            <a href="contact.html" class="btn btn-gold-outline">مشاوره و تماس</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-top">
+      <div>
+        <a href="index.html" class="logo"><span class="logo-mark">🍽️</span><span>چاشنی<small style="color:#8d8474">رستوران مدرن ایرانی</small></span></a>
+        <p style="margin-top:14px">۱۵ سال تجربه در خلق طعم‌های ماندگار.</p>
+        <div class="socials"><a href="#" aria-label="اینستاگرام">📷</a><a href="#" aria-label="تلگرام">✈️</a><a href="#" aria-label="واتساپ">💬</a></div>
+      </div>
+      <div><h4>دسترسی سریع</h4><ul><li><a href="index.html">خانه</a></li><li><a href="menu.html">منوی غذا</a></li><li><a href="about.html">درباره ما</a></li><li><a href="reservation.html">رزرو میز</a></li></ul></div>
+      <div><h4>خدمات</h4><ul><li><a href="menu.html">سفارش آنلاین</a></li><li><a href="reservation.html">رزرو مهمانی</a></li><li><a href="contact.html">پشتیبانی</a></li><li><a href="contact.html">انتقاد و پیشنهاد</a></li></ul></div>
+      <div><h4>عضویت در خبرنامه</h4><p>از تخفیف‌ها باخبر شوید.</p><form class="newsletter"><input type="email" placeholder="ایمیل شما..." aria-label="ایمیل"><button type="submit">عضویت</button></form></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span data-year>2026</span> رستوران چاشنی</span><span>طراحی‌شده با ❤️</span></div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="بازگشت به بالا">↑</button>
+  <script src="js/main.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+</html>

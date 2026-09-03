@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="رزرو آنلاین میز در رستوران چاشنی — سریع، راحت و بدون نیاز به تماس">
+  <title>رزرو میز | رستوران چاشنی</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>">
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="nav-wrap">
+      <a href="index.html" class="logo"><span class="logo-mark">🍽️</span><span>چاشنی<small>رستوران مدرن ایرانی</small></span></a>
+      <nav class="nav-links" aria-label="ناوبری اصلی">
+        <a href="index.html" data-nav="index.html">خانه</a>
+        <a href="menu.html" data-nav="menu.html">منو</a>
+        <a href="about.html" data-nav="about.html">درباره ما</a>
+        <a href="contact.html" data-nav="contact.html">تماس</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="reservation.html" class="btn btn-primary btn-reserve">رزرو میز</a>
+        <button class="hamburger" id="hamburger" aria-label="باز کردن منو" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="منوی موبایل">
+    <a href="index.html" data-nav="index.html">خانه</a>
+    <a href="menu.html" data-nav="menu.html">منو</a>
+    <a href="about.html" data-nav="about.html">درباره ما</a>
+    <a href="contact.html" data-nav="contact.html">تماس</a>
+    <a href="reservation.html" data-nav="reservation.html">رزرو میز</a>
+    <a href="reservation.html" class="btn btn-primary">رزرو میز 🍷</a>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>رزرو آنلاین <span>میز</span></h1>
+        <p>در کمتر از ۲ دقیقه میز خود را برای هر تاریخ و ساعتی رزرو کنید</p>
+        <div class="breadcrumb"><a href="index.html">خانه</a> / رزرو میز</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container form-layout">
+        <aside class="info-card reveal">
+          <h2>راهنمای رزرو 🍷</h2>
+          <p>برای مهمانی‌های بالای ۸ نفر، لطفاً یک روز زودتر هماهنگ کنید.</p>
+          <div class="contact-item"><span class="ci">📋</span><div><strong>مراحل رزرو</strong><span>۱. فرم را پر کنید ۲. پیامک تایید دریافت کنید ۳. سر ساعت تشریف بیاورید</span></div></div>
+          <div class="contact-item"><span class="ci">⏰</span><div><strong>ساعات پذیرش</strong><span>ناهار: ۱۲ تا ۱۶ • شام: ۱۹ تا ۲۴</span></div></div>
+          <div class="contact-item"><span class="ci">🎉</span><div><strong>مراسم و مهمانی</strong><span>سالن VIP تا ۶۰ نفر با منوی اختصاصی: <a href="tel:+982122334455" style="color:#f0d894">۰۲۱-۲۲۳۳۴۴۵۵</a></span></div></div>
+          <div class="hours-box">⚠️ لطفاً ۱۵ دقیقه زودتر تشریف بیاورید. در صورت تاخیر بیش از ۳۰ دقیقه، رزرو لغو می‌شود.</div>
+        </aside>
+
+        <div class="form-card reveal">
+          <h2>فرم رزرو میز 📝</h2>
+          <p>تمام فیلدهای ستاره‌دار الزامی هستند.</p>
+          <div class="alert" role="status"></div>
+          <div id="reserveSummary"></div>
+          <form id="reserveForm" novalidate>
+            <div class="form-grid">
+              <div class="field">
+                <label for="rName">نام و نام خانوادگی <i>*</i></label>
+                <input type="text" id="rName" placeholder="نام شما" autocomplete="name">
+                <span class="err">نام باید حداقل ۳ حرف باشد.</span>
+              </div>
+              <div class="field">
+                <label for="rPhone">شماره موبایل <i>*</i></label>
+                <input type="tel" id="rPhone" placeholder="09123456789" dir="ltr" style="text-align:left" inputmode="numeric" autocomplete="tel">
+                <span class="err">موبایل معتبر وارد کنید (مثل 09123456789).</span>
+              </div>
+              <div class="field">
+                <label for="rGuests">تعداد مهمانان <i>*</i></label>
+                <select id="rGuests">
+                  <option value="">انتخاب کنید...</option>
+                  <option value="1">۱ نفر</option>
+                  <option value="2">۲ نفر</option>
+                  <option value="3">۳ نفر</option>
+                  <option value="4">۴ نفر</option>
+                  <option value="5">۵ نفر</option>
+                  <option value="6">۶ نفر</option>
+                  <option value="8">۸ نفر (خانوادگی)</option>
+                  <option value="12">۱۲ نفر (مهمانی)</option>
+                  <option value="20">۲۰ نفر (مراسم)</option>
+                </select>
+                <span class="err">تعداد مهمانان را انتخاب کنید.</span>
+              </div>
+              <div class="field">
+                <label for="rDate">تاریخ <i>*</i></label>
+                <input type="date" id="rDate">
+                <span class="err">تاریخ را انتخاب کنید.</span>
+              </div>
+              <div class="field">
+                <label for="rTime">ساعت <i>*</i></label>
+                <select id="rTime">
+                  <option value="">انتخاب کنید...</option>
+                  <option value="12:00">۱۲:۰۰ ظهر</option>
+                  <option value="13:30">۱۳:۳۰</option>
+                  <option value="15:00">۱۵:۰۰</option>
+                  <option value="19:00">۱۹:۰۰</option>
+                  <option value="20:30">۲۰:۳۰</option>
+                  <option value="22:00">۲۲:۰۰</option>
+                </select>
+                <span class="err">ساعت را انتخاب کنید.</span>
+              </div>
+              <div class="field">
+                <label for="rTable">نوع میز</label>
+                <select id="rTable">
+                  <option value="normal">سالن اصلی</option>
+                  <option value="vip">سالن VIP</option>
+                  <option value="terrace">تراس و فضای باز</option>
+                  <option value="family">سالن خانوادگی</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="rNote">توضیحات (اختیاری)</label>
+              <textarea id="rNote" placeholder="مثلاً صندلی کودک، کیک تولد، تزئین میز..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" style="margin-top:14px">ثبت رزرو ✓</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-top">
+      <div><a href="index.html" class="logo"><span class="logo-mark">🍽️</span><span>چاشنی<small style="color:#8d8474">رستوران مدرن ایرانی</small></span></a><p style="margin-top:14px">۱۵ سال تجربه در خلق طعم‌های ماندگار.</p><div class="socials"><a href="#" aria-label="اینستاگرام">📷</a><a href="#" aria-label="تلگرام">✈️</a><a href="#" aria-label="واتساپ">💬</a></div></div>
+      <div><h4>دسترسی سریع</h4><ul><li><a href="index.html">خانه</a></li><li><a href="menu.html">منوی غذا</a></li><li><a href="about.html">درباره ما</a></li><li><a href="reservation.html">رزرو میز</a></li></ul></div>
+      <div><h4>خدمات</h4><ul><li><a href="menu.html">سفارش آنلاین</a></li><li><a href="reservation.html">رزرو مهمانی</a></li><li><a href="contact.html">پشتیبانی</a></li><li><a href="contact.html">انتقاد و پیشنهاد</a></li></ul></div>
+      <div><h4>عضویت در خبرنامه</h4><p>از تخفیف‌ها باخبر شوید.</p><form class="newsletter"><input type="email" placeholder="ایمیل شما..." aria-label="ایمیل"><button type="submit">عضویت</button></form></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span data-year>2026</span> رستوران چاشنی</span><span>طراحی‌شده با ❤️</span></div>
+  </footer>
+  <button class="to-top" id="toTop" aria-label="بازگشت به بالا">↑</button>
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>
